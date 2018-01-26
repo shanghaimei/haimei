@@ -1,0 +1,91 @@
+2018-01-25 15:29:23,162 INFO : app created.BASE_DIR=/home/shanghaimei/Desktop/tigereye/tigereye/configs/../..
+2018-01-25 15:51:00,553 INFO : app created.BASE_DIR=/home/shanghaimei/Desktop/tigereye/tigereye/configs/../..
+2018-01-25 15:51:55,480 INFO : app created.BASE_DIR=/home/shanghaimei/Desktop/tigereye/tigereye/configs/../..
+2018-01-25 15:57:20,308 INFO : app created.BASE_DIR=/home/shanghaimei/Desktop/tigereye/tigereye/configs/../..
+2018-01-25 15:57:20,336 INFO : app created.BASE_DIR=/home/shanghaimei/Desktop/tigereye/tigereye/configs/../..
+2018-01-25 16:19:51,760 INFO : app created.BASE_DIR=/home/shanghaimei/Desktop/tigereye/tigereye/configs/../..
+2018-01-25 16:19:51,761 INFO : app created.BASE_DIR=/home/shanghaimei/Desktop/tigereye/tigereye/configs/../..
+2018-01-25 16:42:48,077 INFO : app created.BASE_DIR=/home/shanghaimei/Desktop/tigereye/tigereye/configs/../..
+2018-01-25 16:45:59,552 INFO : app created.BASE_DIR=/home/shanghaimei/Desktop/tigereye/tigereye/configs/../..
+2018-01-25 16:46:06,833 ERROR : Exception on /liuxd/error/ [GET]
+Traceback (most recent call last):
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/shanghaimei/Desktop/tigereye/tigereye/api/__init__.py", line 46, in proxy
+    response = view(**request.view_args)
+  File "/home/shanghaimei/Desktop/tigereye/tigereye/api/liuxd.py", line 6, in error
+    1/0
+ZeroDivisionError: division by zero
+2018-01-26 10:11:27,358 INFO : app created.BASE_DIR=/home/shanghaimei/Desktop/tigereye/tigereye/configs/../..
+2018-01-26 10:17:58,859 INFO : app created.BASE_DIR=/home/shanghaimei/Desktop/tigereye/tigereye/configs/../..
+2018-01-26 10:18:32,716 INFO : app created.BASE_DIR=/home/shanghaimei/Desktop/tigereye/tigereye/configs/../..
+2018-01-26 10:19:04,224 INFO : app created.BASE_DIR=/home/shanghaimei/Desktop/tigereye/tigereye/configs/../..
+2018-01-26 10:20:02,206 INFO : app created.BASE_DIR=/home/shanghaimei/Desktop/tigereye/tigereye/configs/../..
+2018-01-26 10:22:13,549 ERROR : Exception on /test/error/ [GET]
+Traceback (most recent call last):
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/shanghaimei/Desktop/tigereye/tigereye/api/__init__.py", line 46, in proxy
+    response = view(**request.view_args)
+  File "/home/shanghaimei/Desktop/tigereye/tigereye/api/test.py", line 6, in error
+    1/0
+ZeroDivisionError: division by zero
+2018-01-26 10:22:21,698 ERROR : Exception on /test/error/ [GET]
+Traceback (most recent call last):
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/shanghaimei/Desktop/tigereye/tigereye/api/__init__.py", line 46, in proxy
+    response = view(**request.view_args)
+  File "/home/shanghaimei/Desktop/tigereye/tigereye/api/test.py", line 6, in error
+    1/0
+ZeroDivisionError: division by zero
+2018-01-26 10:58:42,289 INFO : app created.BASE_DIR=/home/shanghaimei/Desktop/tigereye/tigereye/configs/../..
+2018-01-26 10:59:04,242 ERROR : Exception on /test/error/ [GET]
+Traceback (most recent call last):
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shanghaimei/Desktop/tigereye/evn/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/shanghaimei/Desktop/tigereye/tigereye/api/__init__.py", line 46, in proxy
+    response = view(**request.view_args)
+  File "/home/shanghaimei/Desktop/tigereye/tigereye/api/test.py", line 6, in error
+    1/0
+ZeroDivisionError: division by zero
