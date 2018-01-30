@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul.nav {
+				text-align: center;
+				margin: 0;
+				/*padding: 0;*/
+				list-style-type: none;
+				/* 去除无序列表中的圆点*/
+				background-color: #FAA819;
+				/*背景色*/
+				overflow: hidden;
+				/*隐藏溢出，清除浮动*/
+				/*width: 1500px;*/
+			}
+			
+			ul.nav li {
+				width: 180px;
+				/*宽度*/
+				float: left;
+				/*左浮动*/
+			}
+			
+			ul.nav li a {
+				display: block;
+				/*将内联元素转化成块级元素*/
+				/*　　块级元素转换为内联元素:*/
+				/*　　将块级元素的display属性值设置为inline即可*/
+				color: white;
+				text-decoration: none;
+				/*将链接的下划线去除*/
+				padding: 10px 30px;
+			}
+			
+			ul a:hover {
+				background: darkgrey;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+			<ul class="nav">
+			<li>
+				<a href="#">HOME</a>
+			</li>
+			<li>
+				<a href="#">ABOUT</a>
+			</li>
+			<li>
+				<a href="#">NEWS</a>
+			</li>
+			<li>
+				<a href="#">PRODUCTS</a>
+			</li>
+			<li>
+				<a href="#">SERVICES</a>
+			</li>
+			<li>
+				<a href="#">CLIENTS</a>
+			</li>
+			<li>
+				<a href="#">CASE STUDIES</a>
+			</li>
+		</ul>
+		</div>
+
+	</body>
+
+</html>

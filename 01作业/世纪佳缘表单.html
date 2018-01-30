@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 500px;
+				position: absolute;
+				top: 10%;
+				left: 30%;
+			
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+	<form id="register" action="#" method="get">
+		<fieldset>
+				<legend>个人资料</legend>
+    	<dl>
+        	<dt>我是：</dt>
+        	
+            <dd> 
+            	姓名：<input type="text" name= "username" />
+            	
+           
+            </dd>
+            <dt>性别：</dt>
+            <dd>
+            	<input type="radio" name="sex"/>男
+                <input type="radio" name="sex"/>女
+            </dd>
+            <dt>生日：</dt>
+            <dd>
+            	<select>
+                	<option>2017</option>
+                    <option>2018</option>
+                </select>年
+                <select>
+                	<option>3</option>
+                    <option>4</option>
+                </select>月
+                <select>
+                	<option>22</option>
+                    <option>21</option>
+                </select>日
+            
+            </dd>
+            <dt>常驻地：</dt>
+            <dd><input type="text" class="common"/></dd>
+            <dt>婚姻状况：</dt>
+            <dd>
+            	<input type="radio" name="marry"/>未婚
+                <input type="radio" name="marry"/>离异
+                <input type="radio" name="marry"/>丧偶
+            </dd>
+            <dt>身高：</dt>
+            <dd><input type="text" class="common"/></dd>
+            <dt>学历：</dt>
+            <dd><input type="text" class="common"/></dd>
+            <dt>月薪：</dt>
+            <dd><input type="text" class="common"/></dd>
+        </dl>
+        
+        <dl class="two">
+        	<dt>注册方式：</dt>
+            <dd>
+            	<input type="radio" name="method"/><img src="images/email.png"/>邮箱注册
+                <input type="radio" name="method"/><img src="images/tellphone.png"/>手机注册
+            </dd>
+            <dt>手机号：</dt>
+            <dd><input type="text" class="common"/></dd>
+            <dt>验证码：</dt>
+            <dd><input type="text" class="common"/></dd>
+            <dt>创建密码：</dt>
+            <dd><input type="text" class="common"/></dd>
+            <dt>昵称：</dt>
+            <dd><input type="text" class="common"/></dd>
+            <dt>自我介绍</dt>
+            <dd>
+            	<ul>
+                	<li>贴标签</li>
+                    <li>自己写</li>
+                   	<input type="text"  />
+                   
+                    
+                </ul>
+                <div>
+                	<h4>请至少选择三个标签，别担心，你可以稍后进行修改！</h4><p></p>
+                    <input class="type1" type="button" value="执着"/>
+                    <input class="type2" type="button" value="幽默"/>
+                    <input class="type3" type="button" value="正直"/>
+                    <input class="type3" type="button" value="漂亮"/>
+                    <input class="type3" type="button" value="善良"/>
+                     <input class="type3" type="button" value="可爱"/>
+                    
+         
+                </div>
+            </dd>
+        </dl>
+       </fieldset>
+    </form>
+</div>
+	</body>
+</html>

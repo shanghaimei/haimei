@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			form{width: 500px;font-size: 16px;}
+			fieldset{background: #f5f5f5;}
+			legend{font-weight: bold;}
+			form div{padding: 10px;}
+			input,select{width: 300px;}
+			select{height: 30px;}
+			input[type=radio],
+			input[type=checkbox],
+			input[type=reset],
+			input[type=submit]{width: auto;}
+			
+		</style>
+	</head>
+	<body>
+
+		<form method="get" action="#">
+			<fieldset>
+				<legend>个人资料</legend>
+				<div>
+					<label for="username">姓名： </label>
+				
+					<input name="username" id="username" type="text" />
+				</div>
+				<div>
+					
+					<label for="pwd">密码： </label>
+					<input name="pwd" id="pwd" type="password" />
+				</div>
+				<div>
+					<label for="email">Email：</label>
+					<input name="email" id="Email" type="text" />
+				</div>
+				<div>
+				<label>出生地：</label>
+				<select name="address">
+					<option>北京</option>
+					<option>上海</option>
+					<option>深圳</option>
+					<option>杭州</option>
+				</select>
+				</div>
+			</fieldset>
+			
+			<fieldset>
+				<legend>个人简介</legend>
+				<div>
+					<label for="text">个人简介</label>
+					<textarea name="text" id="text" cols="50" rows="5"></textarea>
+				</div>
+			</fieldset>
+			
+			<fieldset>
+				<legend>性别</legend>
+				<div>
+					<label for="gender-man">
+						<input type="radio" name="gender" id="gender-man" />
+						男
+					</label>
+			
+					<label for="gender-woman">
+						<input type="radio" name="gender" id="gender-woman" />
+						女
+					</label>
+				</div>
+			</fieldset>
+			
+			<fieldset>
+				<legend>个人爱好</legend>
+				<div>
+					<label>
+						<input type="checkbox" name="hobby" />
+						音乐
+					</label>
+					<label>
+						<!-- checked="checked"设置默认被选择的状态，radio默认值的设置与之相同-->
+						<input type="checkbox" name="hobby" checked="checked"/>
+						游戏
+					</label>
+					<label>
+						<input type="checkbox" name="hobby" />
+						写代码
+					</label>
+				</div>
+			</fieldset>
+			<div>
+				<input type="submit" />
+				<input type="reset" />
+				<input type="hidden" value="123" />
+			</div>
+		</form>
+	</body>
+</html>
