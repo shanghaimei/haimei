@@ -1,0 +1,78 @@
+import threading
+from queue import Queue
+import requests
+from lxml import etree
+import time
+start_url = 'http://qianmu.iguye.com/2018USNEWS世界大学排名'
+link_queue = Queue()
+DOWNLOADER_NUM = 10
+threads = []
+download_pages = 0
+
+
+def fetch(url):
+    r = requests.get(url)
+    global download_pages
+    download_pages += 1
+    #返回抓取的页面内容，并去除页面中的制表符
+    return r.text.replace('\t','')
+
+
+def parse(html):
+    #解析入口界面
+    dom = etree.HTML(html)
+    #获取页面中的表格，每一行的第二列中的url
+    links = dom.xpath('//div[@id="content"]/table/tbody/tr/td[2]/a/@href')
+    #把这些链接放入待抓取队列
+    # link_queue.extend(links)
+    for link in links:
+        if not link.startswith('http://'):
+            link = 'http://qianmu.iguye.com/%s' % link
+        link_queue.put(link)
+
+def parse_university(html):
+    #解析大学详情页面
+    dom = etree.HTML(html)
+    #表格的父节点
+    infobox = dom.xpath('//div[@id="wikiContent"]/div[@class="infobox"]')[0]
+    name = dom.xpath('//div[@id="wikiContent"]/h1[@class="wikiTitle"]/text()')[0]
+    #选择出表格中每一行的第一列的文本
+    keys = infobox.xpath('./table/tbody/tr/td[1]//text()')
+    #选择出表格中每一行的第二列节点
+    cols = infobox.xpath('./table/tbody/tr/td[2]')
+    #遍历第二列的节点，并提取出每个单元格中的文本
+    values = [','.join(col.xpath('.//text()')) for col in cols]
+    #最后，将第一列，第二列中的数据合并成一个字典，组成该大学的信息
+    info = dict(zip(keys, values))
+    print('%s: %s'%(name,info))
+def downloader():
+    while True:
+        #从队列中读取到一个链接，如果没有，则阻塞
+        link = link_queue.get()
+        #如果收到的链接是NONE，则退出循环
+        if link is None:
+            break
+        #下载并解析大学详情网页
+        parse_university(fetch(link))
+        #向队列发送任务完成信号
+        link_queue.task_done()
+        print('remaining queue :%s'% link_queue.qsize())
+
+
+if __name__ == '__main__':
+    start_time = time.time()
+    #抓取并处理入口页面，提取首页内的大学页面链接
+    parse(fetch(start_url))
+    for i in range(DOWNLOADER_NUM):
+        t = threading.Thread(target=downloader)
+        t.start()
+        threads.append(t)
+
+    link_queue.join()
+    for i in range(DOWNLOADER_NUM):
+        link_queue.put(None)
+
+    for t in threads:
+        t.join()
+    print('download %s pages in %.2f seconds'%(download_pages,time.time()-start_time))
+
