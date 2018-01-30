@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			h1{
+				text-align: center;
+			}
+			.p_unselected{
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				background: green;
+				float: left;
+				margin: 5px;
+			}
+			.p_selected{
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				background: red;
+				float: left;
+				margin: 5px;
+				color: yellow;
+			}
+			
+			.clearfix:after{
+				content: '';
+				clear: both;
+				display: block;
+				height: 0px;
+			}
+			.start{
+				width: 200px;
+				height: 35px;
+				line-height: 35px;
+				margin: 0px auto;
+				border-radius: 10px;
+				background: deepskyblue;
+				border: 2px dotted orange;
+				text-align: center;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			onload = function () {
+				
+				var names = document.getElementsByClassName('names')[0];
+				
+				for (var i = 0; i < 35; i++) {
+					
+					var p_name = document.createElement('p');
+					
+					p_name.className = 'p_unselected';
+					
+					p_name.innerHTML = '小天才'+i;
+					
+					names.appendChild(p_name);
+					
+				}
+				
+				var start = document.getElementsByClassName("start")[0];
+				
+				start.onclick = function () {
+					
+					
+					
+					var timerId = setInterval(function () {
+						var selected = Math.ceil(Math.random() * 34);
+					
+						var ps = names.getElementsByTagName('p');
+					
+						for (var i = 0; i < ps.length; i++) {
+							if (selected == i) {
+								ps[i].className = 'p_selected';
+							}else{
+								ps[i].className = 'p_unselected';
+							}
+						}
+						
+					},200)
+					
+					// 只执行一次的定时器，设置超时
+					setTimeout(function () {
+						clearInterval(timerId);
+					},5000)
+					
+					
+				}
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div class="container">
+			
+			<h1>随机点名答题系统</h1>
+			
+			<div class="names clearfix"></div>
+			
+			<div class="start">
+				
+				开始选天才了
+				
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
