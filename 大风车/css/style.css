@@ -1,0 +1,97 @@
+﻿.mainbox{
+	width: 768px;
+	height: 768px;
+	background: url(../img/fsw.png) no-repeat center center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*也可以通过transform使元素剧中*/
+	/*transform: translate(-50%,-50%);*/
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	animation: rotate 20s linear;
+	animation-iteration-count: infinite;
+	
+}
+
+.pobox{
+	position: absolute;
+	width: 130px;
+	height: 384px;
+	/*border: 1px solid #000000;*/
+	top: 0;
+	left: 0;
+	bottom: 384px;
+	right: 0;
+	margin: auto;
+	transform-origin: 50% 100%;/*改变元素中心点*/
+}
+.pobox img{
+	animation:rotate2 20s linear ;
+	animation-iteration-count: infinite;
+}
+/*通过nth-child(1)选择符合选择器条件的元素序列中的制定序列元素*/
+.pobox:nth-child(1){
+	transform: rotate(0deg);
+}
+.pobox:nth-child(2){
+	transform: rotate(45deg);
+}
+.pobox:nth-child(3){
+	transform: rotate(90deg);
+}
+.pobox:nth-child(4){
+	transform: rotate(135deg);
+}
+.pobox:nth-child(5){
+	transform: rotate(180deg);
+}
+.pobox:nth-child(6){
+	transform: rotate(225deg);
+}
+.pobox:nth-child(7){
+	transform: rotate(270deg);
+}
+.pobox:nth-child(8){
+	transform: rotate(315deg);
+}
+
+.pobox:nth-child(2) .imgbox{
+	transform: rotate(-45deg);
+}
+.pobox:nth-child(3) .imgbox{
+	transform: rotate(-90deg);
+}
+.pobox:nth-child(4) .imgbox{
+	transform: rotate(-135deg);
+}
+.pobox:nth-child(5) .imgbox{
+	transform: rotate(-180deg);
+}
+.pobox:nth-child(6) .imgbox{
+	transform: rotate(-225deg);
+}
+.pobox:nth-child(7) .imgbox{
+	transform: rotate(-270deg);
+}
+.pobox:nth-child(8) .imgbox{
+	transform: rotate(-315deg);
+}
+
+
+
+/*-webkit-浏览器核心兼容，带有此兼容标识的属性，只能被该核心浏览器识别*/
+@-webkit-keyframes rotate{
+	from{ transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+@keyframes rotate{
+	from{ transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+
+@keyframes rotate2{
+	from{ transform: rotate(0deg);}
+	to{transform: rotate(-360deg);}
+}

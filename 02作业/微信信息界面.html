@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/weui.css" />
+		<link rel="stylesheet" href="css/weui.min.css" />
+		<script src="js/example.js"></script>
+		<script src="js/jquery-2.1.0.min.js"></script>
+		<script src="js/zepto.min.js"></script>
+		<style>
+			.mainbox {
+				width: 300px;
+				height: 500px;
+				position: relative;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				background-color: #ECECEC;
+				border: 1px solid #000000;
+			}
+			
+			.title {
+				height: 15%;
+				position: relative;
+				top: 0;
+				width: 100%;
+				background: #353535;
+				font-size: 20px;
+				color: #EEEEEE;
+				text-align: center;
+			}
+			
+			.weui_uploader_file {
+				float: right;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mainbox">
+			<div class="title">
+				<br /> 个人信息
+			</div>
+
+			<div class="weui_cells_title"></div>
+			<div class="weui_cells">
+				<div class="weui_cell">
+					<div class="weui_cell_bd weui_cell_primary">
+						<p style="font-size: 16px;">头像</p>
+
+					</div>
+					<div class="weui_cell_ft"><img src="img/untitled.png" height="50px" width="50px"></div>
+				</div>
+				<div class="weui_cell">
+					<div class="weui_cell_bd weui_cell_primary">
+						<p style="font-size: 16px;">昵称</p>
+
+					</div>
+					<div class="weui_cell_ft">泥萌👌</div>
+				</div>
+				<div class="weui_cell">
+					<div class="weui_cell_bd weui_cell_primary">
+						<p style="font-size: 16px;">微信号</p>
+
+					</div>
+					<div class="weui_cell_ft">未设置</div>
+				</div>
+				<div class="weui_cell">
+					<div class="weui_cell_bd weui_cell_primary">
+						<p style="font-size: 16px;">二维码名片</p>
+
+					</div>
+					<div class="weui_cell_ft"><img src="img/2.jpg" height="30px" width="30px"></div>
+				</div>
+				<div class="weui_cell weui_cell_select weui_select_after ">
+					<div class="weui_cell_hd ">
+						我的地址
+					</div>
+					<div class="weui_cell_bd weui_cell_primary ">
+						<select class="weui_select " <!--name="select2 " -->>
+							<option value="1 ">中国</option>
+							<option value="2 ">美国</option>
+							<option value="3 ">英国</option>
+						</select>
+					</div>
+				</div>
+				<div class="weui_cell">
+					<div class="weui_cell_bd weui_cell_primary">
+						<p style="font-size: 16px;">个性签名</p>
+						<textarea class="weui_textarea" placeholder="请填写" rows="1"></textarea>
+
+					</div>
+					
+				</div>
+			</div>
+			<div style="position: absolute;bottom: 0px;width: 100%;">
+				<a href="javascript:;" class="weui_btn weui_btn_primary" id="showToast"style="border-radius: 0px;">授权登陆</a>
+			</div>
+
+			
+			
+			<script>
+				$(function() {
+					$('#showToast').click(function() {
+			
+						$('#toast').show().delay(3000).hide(0);
+				
+					});
+					$('#showLoadingToast').click(function() {
+						$('#loadingToast').fadeIn().delay(3000).fadeOut();
+					});
+				})
+			</script>
+		
+			<div id="toast" style="display:none;">
+				<div class="weui_mask_transparent"></div>
+				<div class="weui_toast">
+					<i class="weui_icon_toast"></i>
+					<p class="weui_toast_content">已完成</p>
+				</div>
+			</div>
+			
+			<!--<div style="background: #353535;height: 8%;bottom: 0px;"></div>-->
+
+	
+		</div>
+	</body>
+
+</html>
